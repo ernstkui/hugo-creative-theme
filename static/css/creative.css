@@ -11,12 +11,13 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: 'Lato', sans-serif;
+    color: #2E2E2E;
 }
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: rgb(139,210,209);
     border-width: 3px;
 }
 
@@ -25,7 +26,7 @@ hr.light {
 }
 
 a {
-    color: #f05f40;
+    color: rgb(139,210,209);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -45,23 +46,32 @@ a:focus {
     color: rgb(52, 52, 52);
 }
 
-h1,
-h2,
+h1 {
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+h2{
+    font-family: 'Vollkorn', serif;
+    text-decoration: underline;
+}
+
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: rgb(139,210,209);
 }
 
 .bg-dark {
@@ -70,7 +80,7 @@ p {
 }
 
 .text-faded {
-    color: rgba(255,255,255,.7);
+    color: rgba(46,46,46,.7);
 }
 
 section {
@@ -85,10 +95,13 @@ aside {
     padding: 0;
 }
 
+.navbar {
+    border: 0;
+}
+
 .navbar-default {
-    border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    background-color: #fff;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(255, 255, 255, 0.4);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -96,32 +109,28 @@ aside {
 
 .navbar-default .navbar-header .navbar-brand {
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
-    font-weight: 700;
-    color: #f05f40;
+    font-weight: 300;
 }
 
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
-    color: #eb3812;
+.navbar-default .navbar-header .navbar-brand:hover {
+    letter-spacing: 3px;
 }
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
     text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 700;
-    color: #222;
+    font-size: 18px;
+    font-weight: 300;
 }
 
 .navbar-default .nav > li>a:hover,
 .navbar-default .nav>li>a:focus:hover {
-    color: #f05f40;
+    color: #2E2E2E;
 }
 
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
-    color: #f05f40!important;
+    color: rgb(139,210,209)!important;
     background-color: transparent;
 }
 
@@ -132,42 +141,35 @@ aside {
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: rgba(255,255,255,.3);
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.4);
     }
 
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
+        color: #2E2E2E;
     }
 
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
+    .navbar-default .navbar-header .navbar-brand:hover {
+        letter-spacing: 3px;
     }
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        color: #2E2E2E;
     }
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
     }
 
     .navbar-default.affix {
-        border-color: rgba(34,34,34,.05);
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
     .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
-        color: #f05f40;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
-        color: #eb3812;
     }
 
     .navbar-default.affix .nav > li>a,
@@ -177,7 +179,7 @@ aside {
 
     .navbar-default.affix .nav > li>a:hover,
     .navbar-default.affix .nav>li>a:focus:hover {
-        color: #f05f40;
+        color: rgb(139,210,209);
     }
 }
 
@@ -186,7 +188,6 @@ header {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: #fff;
     background-image: url(../img/header.jpg);
     background-position: center;
     -webkit-background-size: cover;
@@ -206,7 +207,6 @@ header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
     text-transform: uppercase;
-    font-weight: 700;
 }
 
 header .header-content .header-content-inner hr {
@@ -300,7 +300,7 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Palanquin', sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -332,7 +332,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #f05f40;
+    color: rgb(139,210,209);
 }
 
 .no-gutter > [class*=col-] {
@@ -394,9 +394,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    border-color: rgb(139,210,209);
     color: #fff;
-    background-color: #f05f40;
+    background-color: rgb(139,210,209);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -437,12 +437,12 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    border-color: #f05f40;
-    background-color: #f05f40;
+    border-color: rgb(139,210,209);
+    background-color: rgb(139,210,209);
 }
 
 .btn-primary .badge {
-    color: #f05f40;
+    color: rgb(139,210,209);
     background-color: #fff;
 }
 
@@ -450,7 +450,7 @@ fieldset[disabled] .btn-primary.active {
     border: 0;
     border-radius: 300px;
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Palanquin', sans-serif;
     font-weight: 700;
 }
 
