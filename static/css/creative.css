@@ -134,8 +134,8 @@ aside {
     width: 0;
     left: 0;
     height: 1px;
-    margin-top: 4px;
     background: #2E2E2E;
+    margin-top: 4px;
     -moz-transition: width 0.3s, left 0.3s;
     -o-transition: width 0.3s, left 0.3;
     -webkit-transition: width 0.3s, left 0.3s;
@@ -272,6 +272,10 @@ header .header-content .header-content-inner p {
     position: relative;
     margin: 0 auto;
     max-width: 650px;
+}
+
+.portfolio-link:focus {
+    outline: 0;
 }
 
 .portfolio-box .portfolio-box-caption {
