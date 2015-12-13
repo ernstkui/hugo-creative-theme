@@ -112,6 +112,7 @@ p {
 
 section {
     padding: 100px 0;
+    background: white;
 }
 
 aside {
@@ -210,17 +211,65 @@ aside {
     letter-spacing: 1px;
 }
 
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background: url(../img/header.jpg) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    -webkit-transition: 1s opacity;
+    -moz-transition: 1s opacity;
+    transition: 1s opacity;
+}
+
+video#bgvid {
+    transition: 1s opacity;
+}
+
+#vidpause {
+    position: absolute;
+    color: #2E2E2E;
+    bottom: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.stopfade {
+    opacity: .5;
+}
+
+@media screen and (max-device-width: 700px) {
+
+    header {
+        background: url(../img/header.jpg) no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+
+    #bgvid, #vidpause {
+        display: none;
+    }
+
+}
+
 header {
     position: relative;
     width: 100%;
     min-height: auto;
     text-align: center;
-    background-image: url(../img/header.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
 }
 
 header .header-content {

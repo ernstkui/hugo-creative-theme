@@ -1,8 +1,19 @@
 {{ "<!-- HEADER -->" | safeHTML }}
 <header>
+
+	<video id="bgvid" autoplay loop poster="header.jpg">
+		<!-- <source src="video/hero.webm" type="video/webm"> -->
+		<source src="video/hero.mp4" type="video/mp4">
+	</video>
+
     <div class="header-content">
         <div class="header-content-inner">
             <h1>{{ with .Site.Params.hero.slogan }}{{ . }}{{ end }}</h1>
         </div>
     </div>
+
+	<a id="vidpause" class="btn">
+	  <i id="pausei" class="fa fa-pause fa-lg"></i>
+	</a>
+
 </header>
