@@ -72,7 +72,7 @@ p {
     text-align: justify;
 }
 
-.row .col-lg-3,
+/*.row .col-lg-3,
 .row .col-md-6 {
     padding-right: 25px;
     padding-left: 25px;
@@ -88,7 +88,7 @@ p {
 .row .col-md-6:first-child {
     padding-left: 15px;
 }
-
+*/
 #contact p {
     text-align: center;
 }
@@ -332,11 +332,7 @@ header .header-content .header-content-inner p {
 
 .section-heading span {
     border-bottom: 2px solid #8BD2D1;
-}
-
-#about .section-heading span,
-#aside .section-heading span {
-    border-color: white;
+    border-color: rgba(46,46,46,.7); /* like text-faded */
 }
 
 .service-box {

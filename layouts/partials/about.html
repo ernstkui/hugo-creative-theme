@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading text-faded"><span>{{ with .Site.Params.about.headline }}{{ . }}{{ end }}</span></h2>
+                <h2 class="section-heading text-faded"><span class="text-faded">{{ with .Site.Params.about.headline }}{{ . }}{{ end }}</span></h2>
                 <p class="text-faded">{{ with .Site.Params.about.description }}{{ . | markdownify }}{{ end }}</p>
                 <a href="#contact" class="btn btn-default btn-xl page-scroll">{{ with .Site.Params.about.buttonText }}{{ . }}{{ end }}</a>
             </div>
