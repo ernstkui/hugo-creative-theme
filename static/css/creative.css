@@ -25,16 +25,15 @@ hr.light {
     border-color: #fff;
 }
 
-a {
-    color: rgb(139,210,209);
+a, a:focus {
+    color: rgba(46,46,46,.7);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
-a:hover,
-a:focus {
-    color: #eb3812;
+a:hover {
+    color: rgb(139,210,209);
 }
 
 #about a {
@@ -243,8 +242,6 @@ video#bgvid {
     right: 0;
     margin-right: 20px;
     margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid rgba(17,17,17,0.8)
 }
 
 .stopfade {
@@ -536,14 +533,14 @@ fieldset[disabled] .btn-primary.active {
 
 .btn {
     border: 0;
-    border-radius: 1px;
+    border-radius: 20px;
     text-transform: uppercase;
     font-family: 'Palanquin', sans-serif;
     font-weight: 700;
 }
 
 .btn-xl {
-    padding: 15px 30px;
+    padding: 10px 20px;
 }
 
 ::-moz-selection {
