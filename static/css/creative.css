@@ -26,6 +26,7 @@ hr.light {
 }
 
 a, a:focus {
+    outline: 0;
     color: rgba(46,46,46,.7);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
