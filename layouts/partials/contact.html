@@ -2,17 +2,53 @@
 <section id="contact">
     <div class="container">
         <div class="row">
+
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h2 class="section-heading text-faded"><span>{{ with .Site.Params.contact.headline }}{{ . }}{{ end }}</span></h2>
                 <p class="text-faded">{{ with .Site.Params.contact.description }}{{ . | markdownify }}{{ end }}</p>
             </div>
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                <p class="text-faded">{{ with .Site.Params.contact.phone }}{{ . }}{{ end }}</p>
-            </div>
-            <div class="col-lg-4 text-center">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p class="text-faded"><a href="mailto:{{ with .Site.Params.contact.email }}{{ . }}{{ end }}">{{ with .Site.Params.contact.email }}{{ . }}{{ end }}</a></p>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-6 col-sm-offset-3 col-lg-8 col-lg-offset-2 text-center">
+
+                <div class="row">
+
+                    <div class="col-lg-3 col-sm-6 text-center">
+                        <a href="tel:{{ with .Site.Params.contact.phone }}{{ . }}{{ end }}" target="_blank">
+                            <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                            <p class="text-faded">
+                                {{ with .Site.Params.contact.phone }}{{ . }}{{ end }}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 text-center">
+                        <a href="mailto:{{ with .Site.Params.contact.email }}{{ . }}{{ end }}" target="_blank">
+                        <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                            <p class="text-faded">
+                            {{ with .Site.Params.contact.email }}{{ . }}{{ end }}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 text-center">
+                        <a href="https://twitter.com/{{ with .Site.Params.contact.twitter }}{{ . }}{{ end }}" target="_blank">
+                            <i class="fa fa-twitter fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                            <p class="text-faded">
+                            {{ with .Site.Params.contact.twitter }}{{ . }}{{ end }}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 text-center">
+                        <a href="https://www.instagram.com/{{ with .Site.Params.contact.instagram }}{{ . }}{{ end }}" target="_blank">
+                            <i class="fa fa-instagram fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                            <p class="text-faded">
+                                {{ with .Site.Params.contact.instagram }}{{ . }}{{ end }}
+                            </p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
