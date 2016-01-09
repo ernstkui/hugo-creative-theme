@@ -3,7 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2 class="section-heading text-faded"><span class="text-faded">{{ with .Site.Params.about.headline }}{{ . }}{{ end }}</span></h2>
+
+                <img src="img/{{ with .Site.Params.about.profilePicture }}{{ . }}{{ end }}" class="profile-pic img-responsive img-centered img-circle">
+
                 <p class="text-faded">{{ with .Site.Params.about.description }}{{ . | markdownify }}{{ end }}</p>
                 <a href="{{ .Site.Params.about.buttonUrl }}" target="_blank" class="btn btn-default btn-xl page-scroll">{{ with .Site.Params.about.buttonText }}{{ . }}{{ end }}</a>
             </div>
