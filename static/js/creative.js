@@ -7,14 +7,20 @@
 (function($) {
     "use strict"; // Start of use strict
 
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-    $('a.page-scroll').bind('click', function(event) {
+    var pageScrollFn = function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
-    });
+    };
+
+    // jQuery for page scrolling feature - requires jQuery Easing plugin
+    $('a.page-scroll').bind('click', pageScrollFn);
+    $('.section-a-page-scroll a').bind('click', pageScrollFn);
+
+
+
 
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
