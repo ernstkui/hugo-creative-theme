@@ -38,6 +38,7 @@ a:hover {
 }
 
 #about a {
+    background-color: lightgrey;
     color: rgba(52, 52, 52, .7);
 }
 
@@ -94,7 +95,7 @@ p {
 }
 
 .bg-primary {
-    background-color: rgb(139,210,209);
+    background-color: white;
 }
 
 .bg-dark {
@@ -111,8 +112,18 @@ p {
 }
 
 section {
-    padding: 100px 0;
+    padding: 60px 0;
     background: white;
+}
+
+#about {
+    padding-bottom: 0;
+}
+
+.profile-pic {
+    max-width: 175px;
+    margin-top: 35px !important;
+    margin-bottom: 35px !important;
 }
 
 aside {
@@ -130,9 +141,9 @@ aside {
 .navbar-default {
     font-family: 'Lato', sans-serif;
     background-color: rgba(255, 255, 255, 0.4);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+    -webkit-transition: all 1s ease-in;
+    -moz-transition: all 1s ease-in;
+    transition: all 1s ease-in;
 }
 
 .navbar-default .navbar-header .navbar-brand {
@@ -195,7 +206,8 @@ aside {
 }
 
 .navbar-default {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: transparent;
+
 }
 
 .navbar-default.affix {
@@ -238,7 +250,7 @@ video#bgvid {
 
 #vidpause {
     position: absolute;
-    color: rgb(17,17,17);
+    color: rgba(255, 255, 255, 0.7);
     bottom: 0;
     right: 0;
     margin-right: 20px;
@@ -418,7 +430,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: rgb(139,210,209);
+    color: rgba(46,46,46,.7);
 }
 
 .no-gutter > [class*=col-] {
