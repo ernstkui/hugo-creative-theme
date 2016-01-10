@@ -42,9 +42,15 @@ a:hover {
     color: rgba(52, 52, 52, .7);
 }
 
+p.section-a-page-scroll > a,
+.modal-body a {
+    background-color: rgba(255, 231, 99, 0.8) !important;
+    padding: 2px;
+}
+
 #about a:hover,
 #about a:focus {
-    color: rgb(52, 52, 52);
+    color: rgba(52, 52, 52, .7);
 }
 
 h1 {
@@ -114,6 +120,15 @@ p {
 section {
     padding: 60px 0;
     background: white;
+}
+
+section#contact {
+    padding-bottom: 20px;
+}
+
+.kvk-nr {
+    opacity: 0.6;
+    margin-top: 70px;
 }
 
 #about {
@@ -258,7 +273,7 @@ video#bgvid {
 }
 
 .stopfade {
-    opacity: .5;
+    opacity: .9;
 }
 
 @media screen and (max-device-width: 700px) {
@@ -341,8 +356,7 @@ header .header-content .header-content-inner p {
 }
 
 .section-heading span {
-    border-bottom: 2px solid #8BD2D1;
-    border-color: rgba(46,46,46,.7); /* like text-faded */
+    background-color: rgba(255, 231, 99, 0.8) !important;
 }
 
 .service-box {

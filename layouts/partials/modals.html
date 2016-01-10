@@ -15,25 +15,16 @@
                         <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
                         <ul class="list-inline item-details">
 
-                            <li>{{ with $.Site.Params.portfolio.modal.collaborator }}{{ . }}{{ end }}:
-                                {{ if isset . "collaboratorLink" }}
-                                    <strong>
-                                        <a href="{{ .collaboratarLink }}">{{ .collaborator }}</a>
-                                    </strong>
-                                {{else}}
-                                    <strong>
-                                        {{ .collaborator }}
-                                    </strong>
-                            {{ end }}
+                            <li>{{ with $.Site.Params.portfolio.modal.collaborator }}{{.}}{{ end }}:
+                                <strong>{{ .collaborator | markdownify }}</strong>
                             </li>
-
-                            <!-- {{ with $.Site.Params.portfolio.modal.collaborator }}{{.}}{{ end }}: -->
                             <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}{{ end }}:
                                 <strong>{{ .date }}</strong>
                             </li>
                             <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}{{ end }}:
                                 <strong>{{ .category }}</strong>
                             </li>
+
                         </ul>
                         <p>{{ .description | markdownify }}</p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> {{ with $.Site.Params.portfolio.modal.buttonText }}{{.}}{{ end }}</button>

@@ -62,9 +62,10 @@
 
     vid.addEventListener('ended', function() {
         // only functional if "loop" is removed
-         vid.pause();
+        vid.pause();
         // to capture IE10
         vidFade();
+        pauseButton.innerHTML = '<i class="fa fa-play fa-lg"></i>';
     });
 
     pauseButton.addEventListener("click", function() {
