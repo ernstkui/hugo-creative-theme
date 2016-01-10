@@ -34,7 +34,7 @@ a, a:focus {
 }
 
 a:hover {
-    color: rgb(139,210,209);
+    color: rgba(0, 0, 0, .5);
 }
 
 #about a {
@@ -380,10 +380,10 @@ header .header-content .header-content-inner p {
     text-align: center;
     color: #fff;
     opacity: 0;
-    background: rgba(139, 210, 209, 0.95);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+    background: rgba(0,0,0,.5);
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    transition: all .7s;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content {

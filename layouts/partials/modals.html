@@ -12,23 +12,30 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="modal-body">
-                        <h2 class="section-heading text-faded"><span>{{ .title }}</span></h2>
                         <img src="img/portfolio/{{ .img }}" class="img-responsive img-centered" alt="">
-                        <p>{{ .description | markdownify }}</p>
                         <ul class="list-inline item-details">
-                            <li>{{ with $.Site.Params.portfolio.modal.client }}{{.}}{{ end }}:
-                                <strong><a href="{{ .clientLink }}">{{ .client }}</a>
+
+                            <li>{{ with $.Site.Params.portfolio.modal.collaborator }}{{ . }}{{ end }}:
+                                {{ if isset . "collaboratorLink" }}
+                                    <strong>
+                                        <a href="{{ .collaboratarLink }}">{{ .collaborator }}</a>
                                     </strong>
+                                {{else}}
+                                    <strong>
+                                        {{ .collaborator }}
+                                    </strong>
+                            {{ end }}
                             </li>
+
+                            <!-- {{ with $.Site.Params.portfolio.modal.collaborator }}{{.}}{{ end }}: -->
                             <li>{{ with $.Site.Params.portfolio.modal.date }}{{.}}{{ end }}:
-                                <strong><a href="#">{{ .date }}</a>
-                                    </strong>
+                                <strong>{{ .date }}</strong>
                             </li>
                             <li>{{ with $.Site.Params.portfolio.modal.category }}{{.}}{{ end }}:
-                                <strong><a href="#">{{ .category }}</a>
-                                    </strong>
+                                <strong>{{ .category }}</strong>
                             </li>
                         </ul>
+                        <p>{{ .description | markdownify }}</p>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> {{ with $.Site.Params.portfolio.modal.buttonText }}{{.}}{{ end }}</button>
                     </div>
                 </div>
