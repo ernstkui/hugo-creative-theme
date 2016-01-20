@@ -26,15 +26,16 @@ hr.light {
     border-color: #fff;
 }
 
-a, a:focus {
+a, a:focus, #contact a span {
     outline: 0;
+    text-decoration: none;
     color: rgba(0, 0, 0, 0.7);
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
 }
 
-a:hover {
+a:hover, a:focus  {
     color: rgba(244, 244, 244);
 }
 
@@ -51,16 +52,23 @@ a:hover {
 }
 
 p.section-a-page-scroll > a,
-.modal-body a {
+.modal-body a,
+.contacts-wrapper a span {
     background-color: rgba(255, 241, 111, 0.8) !important;
     padding: 2px;
 }
 
 p.section-a-page-scroll > a:hover,
-.modal-body a:hover {
+.modal-body a:hover,
+.contacts-wrapper a:hover span  {
     text-decoration: none;
-    color: rgba(0, 0, 0, 1);
     background-color: rgba(255, 231, 99, 1) !important;
+    color: rgba(0, 0, 0, 1);
+}
+
+#contact a:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
 }
 
 
@@ -113,9 +121,21 @@ p {
     padding-left: 15px;
 }
 */
+
+.contact-header {
+    text-transform: uppercase;
+    padding-top: 8px;
+}
+
 #contact p {
     text-align: center;
+    margin-bottom: 3px;
 }
+
+.contacts-wrapper div {
+    margin-top: 25px;
+}
+
 
 .bg-primary {
     background-color: rgb(253, 252, 255);
@@ -370,10 +390,6 @@ header .header-content .header-content-inner p {
 
 .section-heading {
     margin-top: 0;
-}
-
-.section-heading span {
-    background-color: rgba(255, 231, 99, 0.8) !important;
 }
 
 .service-box {
