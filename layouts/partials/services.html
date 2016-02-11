@@ -1,14 +1,5 @@
 {{ "<!-- SERVICES -->" | safeHTML }}
 <section id="services">
-<!--
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading text-faded"><span>{{ with .Site.Params.services.headline }}{{ . }}{{ end }}</span></h2>
-            </div>
-        </div>
-    </div>
- -->
     <div class="container">
         <div class="row">
             {{ range .Site.Params.services.list }}
@@ -16,6 +7,7 @@
                 <div class="service-box">
                     <i class="fa fa-4x {{ .icon }} wow bounceIn text-primary"></i>
                     <h3 class="text-faded">{{ .title }}</h3>
+                    <h4 class="">{{ .tags }}</h4>
                     <p class="">{{ .description }}</p>
                 </div>
             </div>
